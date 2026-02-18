@@ -1,0 +1,4 @@
+__pycache__/
+.ipynb_checkpoints/
+data/
+*.h5   # models if too big

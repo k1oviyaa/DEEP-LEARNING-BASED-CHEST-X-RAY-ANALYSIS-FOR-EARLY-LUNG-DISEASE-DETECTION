@@ -1,0 +1,44 @@
+{% extends 'base.html' %} 
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div class="container-fluid justify-content-center" id="outer_div">
+  <h2 class="d-flex justify-content-center p-2">Lung Disease Classifier</h2>
+  <div class="row">
+    
+    <!-- Upload Section -->
+    <div class="col-md-6 bg-secondary">
+      <div class="row">
+        <div class="col bg-secondary p-3">
+          <form action="/" method="post" enctype="multipart/form-data">
+            <div class="input-group">
+              <input type="file" name="file" class="form-control" required />
+              <div class="input-group-append">
+                <button class="btn btn-primary" type="submit">Predict</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      
+      <!-- Display Uploaded Image -->
+      <div class="container pb-4 text-center">
+        {% if input_img %}
+        <img width="300px" height="300px" class="img-fluid" src="{{ url_for('static', filename='uploads/' + input_img) }}" />
+        {% endif %}
+      </div>
+    </div>
+    
+    <!-- Prediction Section -->
+    <div class="col-md-6 bg-danger pb-2">
+      <div class="container p-2" id="pred">
+        {% if pred_img %}
+        <img class="img-fluid" style="padding-top: 20px" src="/static/{{ pred_img }}" />
+        {% endif %}
+      </div>
+    </div>
+    
+  </div>
+</div>
+{% endblock %}

@@ -64,7 +64,22 @@ Pneumonia
 COVID-19
 
 Normal lungs
+⚙️ Installation
 
+Clone the repository:
+
+git clone https://github.com/yourusername/repository-name.git
+cd repository-name
+
+Install dependencies:
+
+pip install -r requirements.txt
+
+Download dataset:
+
+python scripts/download_dataset.py
+▶️ Run the Project
+python application/app.py
 ⚙️ Methodology
 1️⃣ Data Preprocessing
 
@@ -203,3 +218,4 @@ Chest X-ray classification
 👩‍💻 Author
 
 Oviyaa K
+
